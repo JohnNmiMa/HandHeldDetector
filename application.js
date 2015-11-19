@@ -14,6 +14,7 @@ $(document).ready(function() {
             // ZTE Grand S; Samsung Galaxy Note 3
             $( "#detector" ).css('background-color', 'green');
             $( "#detector .info" ).text('Is Handheld Device');
+            return;
         }
 
         $( "#detector" ).css('background-color', 'red');
