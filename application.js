@@ -28,7 +28,7 @@ $(document).ready(function() {
             mqOrientation = window.matchMedia( "(orientation: portrait)" ),
             mqOrientationStr = mqOrientation.matches ? "Portrait" : "Landscape";
 
-        var info = "Device info: screen width/height=" + scrW + "/" + scrH + "<br>" +
+        var info = "<h3>Device info:</h3>screen width/height=" + scrW + "/" + scrH + "<br>" +
             "LayoutViewport width/height=" + layoutViewportW + "/" + layoutViewportH + "<br>" +
             "VisualViewport width/height=" + visualViewportW + "/" + visualViewportH + "<br>" +
             "<html> width/height=" + htmlW + "/" + htmlH + "<br>" +
