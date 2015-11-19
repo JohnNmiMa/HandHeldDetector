@@ -1,17 +1,19 @@
 $(document).ready(function() {
 	function detectHandHeld() {
-        var mq1 = window.matchMedia("screen and (min-device-width:320px) and (max-device-width:767px)");
-        if (mq1.matches) {
-            // Catches all iOS devices, Samsung Galaxy S3
+        var mq = window.matchMedia("screen and (min-device-width:320px) and (max-device-width:767px)");
+        if (mq.matches) {
+            // Catches all iOS devices, Samsung Galaxy S3,S5
 			$( "#detector" ).css('background-color', 'green');
             $( "#detector .info" ).text('Is Handheld Device');
             return;
 		}
 
-        var mq2 = window.matchMedia("screen and (min-device-width:1080px) and (max-device-width:1080px) and (-webkit-min-device-pixel-ratio: 3)");
-        if (mq1.matches) {
+        var mq = window.matchMedia("screen and (min-device-width:1080px) and (max-device-width:1080px) and (-webkit-min-device-pixel-ratio: 3)");
+        if (mq.matches) {
             // Matches Samsung Galaxy S4,S5; LG Nexus 4,5; HTc One; Sony Xperia Z3,Z, Xiaomi Mi4,3; Lenovo K900, Pahtech Vega n6,
-            // ZTE Grand S; Samsung Galaxy Note 3
+            // ZTE Grand S; Samsung Galaxy Note 3 on Browserstack. But, there were inconsistencies in device dimension reporting.
+            // One time Sansung S4 would report 1080px, and other times it would report 360px
+            // Doesn't seem to match any tablets (they have different pixel ratios)
             $( "#detector" ).css('background-color', 'green');
             $( "#detector .info" ).text('Is Handheld Device');
             return;
