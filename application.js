@@ -1,16 +1,23 @@
 $(document).ready(function() {
 	function detectHandHeld() {
-        //var mq = window.matchMedia("screen and (max-device-width:480px) and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 4)");
-        var mq = window.matchMedia("screen and (min-device-width:320px) and (max-device-width:767px)");
-        if (mq.matches) {
-        //if (screen.width >= 320 && screen.width <= 480) {
-            // Catches all iOS devices
+        var mq1 = window.matchMedia("screen and (min-device-width:320px) and (max-device-width:767px)");
+        if (mq1.matches) {
+            // Catches all iOS devices, Samsung Galaxy S3
 			$( "#detector" ).css('background-color', 'green');
             $( "#detector .info" ).text('Is Handheld Device');
-		} else {
-			$( "#detector" ).css('background-color', 'red');
-            $( "#detector > .info" ).text('Is NOT Handheld Device');
+            return;
 		}
+
+        var mq2 = window.matchMedia("screen and (min-device-width:1080px) and (max-device-width:1080px) and (-webkit-min-device-pixel-ratio: 3)");
+        if (mq1.matches) {
+            // Matches Samsung Galaxy S4,S5; LG Nexus 4,5; HTc One; Sony Xperia Z3,Z, Xiaomi Mi4,3; Lenovo K900, Pahtech Vega n6,
+            // ZTE Grand S; Samsung Galaxy Note 3
+            $( "#detector" ).css('background-color', 'green');
+            $( "#detector .info" ).text('Is Handheld Device');
+        }
+
+        $( "#detector" ).css('background-color', 'red');
+        $( "#detector > .info" ).text('Is NOT Handheld Device');
 	}
 
     function setDimension() {
