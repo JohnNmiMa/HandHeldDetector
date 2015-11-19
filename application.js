@@ -8,7 +8,7 @@ $(document).ready(function() {
             return;
 		}
 
-        var mq = window.matchMedia("screen and (min-device-width:1080px) and (max-device-width:1080px) and (-webkit-device-pixel-ratio: 3)");
+        var mq = window.matchMedia("screen and (device-width:1080px) and (-webkit-device-pixel-ratio: 3)");
         if (mq.matches) {
             // Matches Samsung Galaxy S4,S5; LG Nexus 4,5; HTc One; Sony Xperia Z3,Z, Xiaomi Mi4,3; Lenovo K900, Pahtech Vega n6,
             // ZTE Grand S; Samsung Galaxy Note 3 on Browserstack. But, there were inconsistencies in device dimension reporting.
