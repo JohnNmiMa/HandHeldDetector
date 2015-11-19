@@ -31,7 +31,7 @@ $(document).ready(function() {
         var info = "<h3>Device info:</h3>screen width/height=" + scrW + "/" + scrH + "<br>" +
             "LayoutViewport width/height=" + layoutViewportW + "/" + layoutViewportH + "<br>" +
             "VisualViewport width/height=" + visualViewportW + "/" + visualViewportH + "<br>" +
-            "<html> width/height=" + htmlW + "/" + htmlH + "<br>" +
+            "&lt;html&gt; width/height=" + htmlW + "/" + htmlH + "<br>" +
             "Pixel ratio = " + pixelRatioStr + "<br>" + mqOrientationStr;
 
         return info;
