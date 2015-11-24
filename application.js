@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	function detectHandHeld() {
-        var mq = window.matchMedia("screen and (min-device-width:320px) and (max-device-width:767px)");
+        var mq = window.matchMedia("screen and (max-device-width:480px)");
         if (mq.matches) {
             // Catches all iOS devices, Samsung Galaxy S3,S5
 			$( "#detector" ).css('background-color', 'green');
